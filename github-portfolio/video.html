@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://dev.to; font-src 'self'; media-src 'self'; frame-src https://www.linkedin.com;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video — Salma Mulla-Supe</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" style="display:flex;flex-direction:column;text-decoration:none;">
+        <span style="font-size:1.25rem;font-weight:700;color:var(--text);text-decoration:underline;text-underline-offset:4px;">Salma Mulla-Supe</span>
+        <span style="font-size:0.625rem;font-weight:500;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:2px;">Personal Portfolio</span>
+      </a>
+      <button class="nav-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Introduction</a></li>
+        <li><a href="video.html" class="active">Media</a></li>
+        <li><a href="linkedin.html">Content</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="lights-toggle" id="lightsToggle" onclick="toggleLights()" aria-label="Toggle lights" style="background:none;border:none;cursor:pointer;padding:8px;color:var(--text);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-sm);transition:var(--transition);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="main">
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Featured</span>
+          <h2 class="section-title">Video</h2>
+          <p class="section-subtitle">Insights, talks, and commentary on the evolving cybersecurity landscape.</p>
+        </div>
+
+        <div class="video-wrapper" id="videoWrapper">
+          <div class="video-placeholder" id="videoPlaceholder" style="display:none;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            <p>Video unavailable here —</p>
+            <a href="https://www.linkedin.com/posts/salma-mulla-supe_whdcon25-whd-cybersecurity-activity-7390799062117052416-UUps" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;">Watch on LinkedIn ↗</a>
+          </div>
+
+          <video id="mainVideo" loop playsinline muted style="display:block;width:100%;border-radius:var(--radius);">
+            <source src="featured.mp4" type="video/mp4">
+          </video>
+
+          <div class="video-overlay" id="videoOverlay">
+            <button class="video-play-btn" id="playBtn" aria-label="Play/Pause">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor"></polygon></svg>
+            </button>
+          </div>
+
+          <div class="video-controls" id="videoControls">
+            <button class="video-control-btn" id="ctrlPlay" aria-label="Play/Pause">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </button>
+            <button class="video-control-btn" id="ctrlMute" aria-label="Mute/Unmute">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+            </button>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:20px;">
+          <p style="font-size:0.875rem;color:var(--text-muted);">Hover the video to reveal controls. Click to play/pause.</p>
+          <a href="https://www.linkedin.com/posts/salma-mulla-supe_whdcon25-whd-cybersecurity-activity-7390799062117052416-UUps" target="_blank" rel="noopener noreferrer" style="font-size:0.8125rem;color:var(--primary);display:inline-flex;align-items:center;gap:4px;margin-top:8px;text-decoration:none;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            View on LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>Personal Portfolio</p>
+      <p>Salma Mulla-Supe 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+
+    // Lights off / dark mode toggle
+    function toggleLights() {
+      document.body.classList.toggle('lights-off');
+      const isDark = document.body.classList.contains('lights-off');
+      localStorage.setItem('lightsOff', isDark ? 'true' : 'false');
+    }
+
+    // Check for saved preference
+    if (localStorage.getItem('lightsOff') === 'true') {
+      document.body.classList.add('lights-off');
+    }
+
+    const video = document.getElementById('mainVideo');
+    const placeholder = document.getElementById('videoPlaceholder');
+    const overlay = document.getElementById('videoOverlay');
+    const controls = document.getElementById('videoControls');
+    const playBtn = document.getElementById('playBtn');
+    const ctrlPlay = document.getElementById('ctrlPlay');
+    const ctrlMute = document.getElementById('ctrlMute');
+    let isPlaying = false;
+    let isMuted = true;
+
+    // Check if video file exists by trying to load metadata
+    video.addEventListener('loadedmetadata', function() {
+      placeholder.style.display = 'none';
+      video.style.display = 'block';
+      overlay.style.display = 'flex';
+      controls.style.display = 'flex';
+    });
+
+    video.addEventListener('error', function() {
+      // Keep placeholder visible if video fails to load
+      placeholder.style.display = 'flex';
+      video.style.display = 'none';
+      overlay.style.display = 'none';
+      controls.style.display = 'none';
+    });
+
+    function togglePlay() {
+      if (video.paused) {
+        video.play();
+        isPlaying = true;
+        playBtn.innerHTML = '<svg viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" fill="currentColor" rx="1"/><rect x="14" y="4" width="4" height="16" fill="currentColor" rx="1"/></svg>';
+        ctrlPlay.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>';
+      } else {
+        video.pause();
+        isPlaying = false;
+        playBtn.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor"></polygon></svg>';
+        ctrlPlay.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>';
+      }
+    }
+
+    function toggleMute() {
+      video.muted = !video.muted;
+      isMuted = video.muted;
+      if (isMuted) {
+        ctrlMute.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>';
+      } else {
+        ctrlMute.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>';
+      }
+    }
+
+    playBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      togglePlay();
+    });
+
+    ctrlPlay.addEventListener('click', function(e) {
+      e.stopPropagation();
+      togglePlay();
+    });
+
+    ctrlMute.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleMute();
+    });
+
+    video.addEventListener('click', togglePlay);
+  </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://dev.to; font-src 'self'; media-src 'self'; frame-src https://www.linkedin.com;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Content — Salma Mulla-Supe</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" style="display:flex;flex-direction:column;text-decoration:none;">
+        <span style="font-size:1.25rem;font-weight:700;color:var(--text);text-decoration:underline;text-underline-offset:4px;">Salma Mulla-Supe</span>
+        <span style="font-size:0.625rem;font-weight:500;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:2px;">Personal Portfolio</span>
+      </a>
+      <button class="nav-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Introduction</a></li>
+        <li><a href="video.html">Media</a></li>
+        <li><a href="linkedin.html" class="active">Content</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="lights-toggle" id="lightsToggle" onclick="toggleLights()" aria-label="Toggle lights" style="background:none;border:none;cursor:pointer;padding:8px;color:var(--text);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-sm);transition:var(--transition);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">LinkedIn Feed</span>
+          <h2 class="section-title">Latest Posts</h2>
+          <p class="section-subtitle">Regular insights and commentary shared with the professional community on LinkedIn.</p>
+        </div>
+
+        <div class="articles-grid" id="linkedinList">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="view-all">
+          <a href="https://www.linkedin.com/in/salma-mulla-supe/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:6px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            View LinkedIn Profile
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>Salma Mulla-Supe — Cybersecurity Consultant</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+
+    // Lights off / dark mode toggle
+    function toggleLights() {
+      document.body.classList.toggle('lights-off');
+      const isDark = document.body.classList.contains('lights-off');
+      localStorage.setItem('lightsOff', isDark ? 'true' : 'false');
+    }
+
+    // Check for saved preference
+    if (localStorage.getItem('lightsOff') === 'true') {
+      document.body.classList.add('lights-off');
+    }
+
+    const defaultPosts = [
+      {
+        id: 1,
+        title: 'Cyber Heroes Program',
+        excerpt: 'Proud to be part of the Cyber Heroes Program — empowering the next generation of cybersecurity professionals through mentorship, knowledge sharing, and building a community of defenders.',
+        date: 'May 2026',
+        link: 'https://www.linkedin.com/posts/salma-mulla-supe_cyber-heroes-program-activity-7431738359154102272-HcIg?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGhxNcEBzTxp-h2Vj1EygWaPjycD7NO4HUE'
+      },
+      {
+        id: 2,
+        title: 'WHDCon25: Cybersecurity Insights',
+        excerpt: 'Sharing key takeaways from WHDCon25 — exploring the latest in web hosting security, cloud infrastructure protection, and defending against emerging cyber threats.',
+        date: 'April 2026',
+        link: 'https://www.linkedin.com/posts/salma-mulla-supe_whdcon25-whd-cybersecurity-activity-7390799062117052416-UUps?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGhxNcEBzTxp-h2Vj1EygWaPjycD7NO4HUE'
+      },
+      {
+        id: 3,
+        title: 'Cyber Awareness & Team Leadership',
+        excerpt: 'Leading cyber awareness initiatives with Team Deloitte — fostering a security-first mindset across organizations through training, mentorship, and building resilient teams.',
+        date: 'March 2026',
+        link: 'https://www.linkedin.com/posts/salma-mulla-supe_cyberawareness-cybersecurityleadership-teamdeloitte-activity-7387027864183001088-zPnV?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGhxNcEBzTxp-h2Vj1EygWaPjycD7NO4HUE'
+      }
+    ];
+
+    // XSS Protection: Escape HTML entities
+    function escapeHtml(text) {
+      if (text === null || text === undefined) return '';
+      return String(text)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function loadPosts() {
+      const container = document.getElementById('linkedinList');
+      const stored = localStorage.getItem('linkedin_posts');
+      const posts = stored ? JSON.parse(stored) : defaultPosts;
+
+      container.innerHTML = posts.map((post, index) => {
+        const title = escapeHtml(post.title);
+        const excerpt = escapeHtml(post.excerpt);
+        const date = escapeHtml(post.date);
+        const link = escapeHtml(post.link);
+
+        return `<a href="${link}" target="_blank" rel="noopener noreferrer" class="article-card">
+          <div class="article-header">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--primary-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </div>
+            <div class="article-meta">${date}</div>
+          </div>
+          <h3 class="article-title">${title}</h3>
+          <p class="article-excerpt">${excerpt}</p>
+          <div class="article-footer">
+            <span style="display:flex;align-items:center;gap:6px;color:var(--primary);font-weight:500;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              View on LinkedIn
+            </span>
+          </div>
+        </a>`;
+      }).join('');
+    }
+
+    loadPosts();
+  </script>
+</body>
+</html>

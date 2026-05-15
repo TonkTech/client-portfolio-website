@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://dev.to; font-src 'self'; media-src 'self'; frame-src https://www.linkedin.com;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salma Mulla-Supe — Cybersecurity Consultant</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" style="display:flex;flex-direction:column;text-decoration:none;">
+        <span style="font-size:1.25rem;font-weight:700;color:var(--text);text-decoration:underline;text-underline-offset:4px;">Salma Mulla-Supe</span>
+        <span style="font-size:0.625rem;font-weight:500;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:2px;">Personal Portfolio</span>
+      </a>
+      <button class="nav-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Introduction</a></li>
+        <li><a href="video.html">Media</a></li>
+        <li><a href="linkedin.html">Content</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="lights-toggle" id="lightsToggle" onclick="toggleLights()" aria-label="Toggle lights" style="background:none;border:none;cursor:pointer;padding:8px;color:var(--text);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-sm);transition:var(--transition);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <main class="main">
+
+    <!-- Hero / Introduction - Full height first section -->
+    <section class="hero liquid-reveal" data-animate="liquid">
+      <div class="container">
+        <div class="hero-content" style="max-width:800px;margin:0 auto;text-align:center;">
+
+          <!-- Portrait -->
+          <div class="hero-portrait">
+            <div class="hero-portrait-inner">
+              <div id="hero-quote-bubble">
+                <span id="hero-quote-text">"Carpe Diem"</span>
+                <span class="hero-quote-tail"></span>
+              </div>
+              <div id="hero-photo-wrap">
+                <img src="photo.jpg" alt="Salma Mulla-Supe"
+                  id="hero-photo"
+                  style="width:100%;height:100%;object-fit:cover;object-position:center top;"
+                  onerror="document.getElementById('hero-photo').style.display='none';document.getElementById('hero-photo-initials').style.display='flex';">
+                <span id="hero-photo-initials" style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;font-size:1.75rem;font-weight:700;color:var(--primary);font-family:'DM Sans',sans-serif;">SS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-badge" style="justify-content:center;">
+            <span class="dot"></span>
+            Senior Manager at Deloitte & Touche
+          </div>
+          <h1 class="hero-title word-split" data-animate="words">
+              <span class="word"><span class="word-inner">"Two</span></span> <span class="word"><span class="word-inner">decades</span></span> <span class="word"><span class="word-inner">of</span></span> <span class="word"><span class="word-inner">seizing</span></span> <span class="word"><span class="word-inner">opportunities</span></span> <span class="word"><span class="word-inner">and</span></span> <span class="word"><span class="word-inner">creating</span></span> <span class="word"><span class="word-inner">value"</span></span>
+            </h1>
+          <p class="hero-desc" style="max-width:600px;margin:0 auto 32px;">
+            Built on curiosity, driven by momentum. My name is Salma Mulla-Supe and I am a Senior Manager in Technology and Transformation at Deloitte & Touche (Qatar).
+          </p>
+          <p class="hero-desc cascade-item" style="max-width:600px;margin:0 auto 32px;font-style:italic;" data-animate="cascade" data-delay="150">
+            "I am a firm believer of the philosophy that life truly only begins at the edge of your comfort zone, and thus has shaped the decisions I make both career wise as well as in my personal life. Allowing me to take initiative and move with it."
+          </p>
+          <div class="btn-group" style="justify-content:center;">
+            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+            <a href="articles.html" class="btn btn-secondary">Read Articles</a>
+          </div>
+          <div class="hero-stats velocity-skew" data-animate="skew">
+            <div>
+              <div class="stat-value">20+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div>
+              <div class="stat-value">CDPSE</div>
+              <div class="stat-label">Certified</div>
+            </div>
+            <div>
+              <div class="stat-value">Deloitte</div>
+              <div class="stat-label">Senior Manager</div>
+            </div>
+          </div>
+          <div class="hero-scroll-hint">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"></path></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credentials Section -->
+    <section class="section perspective-tilt" style="padding:80px 0;" data-animate="perspective">
+      <div class="container">
+        <div class="credentials-grid">
+          <div>
+            <span class="section-label cascade-item" data-animate="cascade" data-delay="0">Expertise</span>
+            <h2 class="section-title cascade-item" style="font-size:2rem;margin-top:12px;" data-animate="cascade" data-delay="50">Professional Credentials</h2>
+            <div style="display:flex;flex-direction:column;gap:16px;margin-top:24px;">
+              <div class="cascade-item" style="display:flex;align-items:flex-start;gap:12px;" data-animate="cascade" data-delay="100">
+                <span style="width:8px;height:8px;background:var(--primary);border-radius:50%;margin-top:8px;flex-shrink:0;"></span>
+                <p style="color:var(--text-secondary);line-height:1.6;">Led cybersecurity strategies across GCC organizations</p>
+              </div>
+              <div class="cascade-item" style="display:flex;align-items:flex-start;gap:12px;" data-animate="cascade" data-delay="200">
+                <span style="width:8px;height:8px;background:var(--primary);border-radius:50%;margin-top:8px;flex-shrink:0;"></span>
+                <p style="color:var(--text-secondary);line-height:1.6;">Expert in GRC frameworks, BCMS/ISMS implementation</p>
+              </div>
+              <div class="cascade-item" style="display:flex;align-items:flex-start;gap:12px;" data-animate="cascade" data-delay="300">
+                <span style="width:8px;height:8px;background:var(--primary);border-radius:50%;margin-top:8px;flex-shrink:0;"></span>
+                <p style="color:var(--text-secondary);line-height:1.6;">Compliance audits across banking, healthcare, and government sectors</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card magnetic-float" style="margin:0;" data-animate="magnetic">
+            <div style="padding:28px 32px;border-bottom:1px solid var(--border);background:var(--bg);">
+              <span style="font-size:0.8125rem;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:0.1em;">Certifications</span>
+              <h4 style="font-size:1.125rem;font-weight:700;color:var(--text);margin-top:8px;">CISM, CDPSE, ISO 27001 Lead Auditor</h4>
+              <p style="font-size:0.875rem;color:var(--text-muted);margin-top:4px;">CISSP (ongoing training)</p>
+            </div>
+            <div style="padding:28px 32px;">
+              <div class="cert-grid">
+                <div style="display:flex;align-items:center;gap:10px;padding:12px;background:var(--bg);border-radius:var(--radius-sm);">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  <span style="font-size:0.875rem;font-weight:500;color:var(--text);">GRC Expert</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;padding:12px;background:var(--bg);border-radius:var(--radius-sm);">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  <span style="font-size:0.875rem;font-weight:500;color:var(--text);">BCMS/ISMS</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;padding:12px;background:var(--bg);border-radius:var(--radius-sm);">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  <span style="font-size:0.875rem;font-weight:500;color:var(--text);">Risk Management</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;padding:12px;background:var(--bg);border-radius:var(--radius-sm);">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  <span style="font-size:0.875rem;font-weight:500;color:var(--text);">Team Leadership</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience Preview -->
+    <section class="section section-alt ripple-reveal" style="padding:80px 0;position:relative;" data-animate="ripple">
+      <div class="container">
+        <div class="section-header" style="text-align:center;max-width:600px;margin:0 auto 48px;">
+          <span class="section-label cascade-item" data-animate="cascade" data-delay="0">Career</span>
+          <h2 class="section-title cascade-item" data-animate="cascade" data-delay="50">Two Decades of Impact</h2>
+          <p class="section-subtitle cascade-item" data-animate="cascade" data-delay="100">From Mphasis to Deloitte — building security frameworks across India and the GCC.</p>
+        </div>
+        <div class="career-grid">
+          <div class="cascade-item" style="background:var(--bg);padding:32px;border-radius:var(--radius);border:1px solid var(--border);" data-animate="cascade" data-delay="0">
+            <div style="font-size:0.8125rem;font-weight:600;color:var(--primary);margin-bottom:12px;">2017 — Present</div>
+            <h4 style="font-size:1.125rem;font-weight:700;color:var(--text);">Deloitte & Touche</h4>
+            <p style="font-size:0.9375rem;color:var(--text-secondary);margin-top:8px;">Senior Manager, Technology and Transformation (Qatar)</p>
+          </div>
+          <div class="cascade-item" style="background:var(--bg);padding:32px;border-radius:var(--radius);border:1px solid var(--border);" data-animate="cascade" data-delay="100">
+            <div style="font-size:0.8125rem;font-weight:600;color:var(--primary);margin-bottom:12px;">2014 — 2016</div>
+            <h4 style="font-size:1.125rem;font-weight:700;color:var(--text);">Deloitte & Touche</h4>
+            <p style="font-size:0.9375rem;color:var(--text-secondary);margin-top:8px;">Deputy Manager, Cyber Technology Risk (India)</p>
+          </div>
+          <div class="cascade-item" style="background:var(--bg);padding:32px;border-radius:var(--radius);border:1px solid var(--border);" data-animate="cascade" data-delay="200">
+            <div style="font-size:0.8125rem;font-weight:600;color:var(--primary);margin-bottom:12px;">2001 — 2014</div>
+            <h4 style="font-size:1.125rem;font-weight:700;color:var(--text);">Mphasis India</h4>
+            <p style="font-size:0.9375rem;color:var(--text-secondary);margin-top:8px;">Manager, Business Security and Compliance</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards & Recognition -->
+    <section class="section elastic-snap" style="padding:80px 0;" data-animate="elastic">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+          <div>
+            <span class="section-label cascade-item" data-animate="cascade" data-delay="0">Recognition</span>
+            <h2 class="section-title cascade-item" style="font-size:2rem;margin-top:12px;" data-animate="cascade" data-delay="50">Awards & Achievements</h2>
+            <p class="cascade-item" style="color:var(--text-secondary);line-height:1.7;margin-top:16px;" data-animate="cascade" data-delay="100">
+              Acknowledged for excellence in security leadership, team management, and going above and beyond for clients.
+            </p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div class="cascade-item" style="display:flex;align-items:center;gap:16px;padding:20px 24px;background:var(--bg-alt);border-radius:var(--radius);border:1px solid var(--border);" data-animate="cascade" data-delay="0">
+              <div style="width:44px;height:44px;border-radius:50%;background:var(--primary-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+              </div>
+              <div>
+                <h4 style="font-size:1rem;font-weight:600;color:var(--text);">Deloitte Going Above and Beyond (ABBY) Award</h4>
+                <p style="font-size:0.875rem;color:var(--text-muted);">2015 — Across a team of 30</p>
+              </div>
+            </div>
+            <div class="cascade-item" style="display:flex;align-items:center;gap:16px;padding:20px 24px;background:var(--bg-alt);border-radius:var(--radius);border:1px solid var(--border);" data-animate="cascade" data-delay="100">
+              <div style="width:44px;height:44px;border-radius:50%;background:var(--primary-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <div>
+                <h4 style="font-size:1rem;font-weight:600;color:var(--text);">Best Support Employee</h4>
+                <p style="font-size:0.875rem;color:var(--text-muted);">Banking and Capital Markets — Across 1500 people</p>
+              </div>
+            </div>
+            <div class="cascade-item" style="display:flex;align-items:center;gap:16px;padding:20px 24px;background:var(--bg-alt);border-radius:var(--radius);border:1px solid var(--border);" data-animate="cascade" data-delay="200">
+              <div style="width:44px;height:44px;border-radius:50%;background:var(--primary-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </div>
+              <div>
+                <h4 style="font-size:1rem;font-weight:600;color:var(--text);">Mphasis Living Values Certificates</h4>
+                <p style="font-size:0.875rem;color:var(--text-muted);">Internal & external client recognition</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating LinkedIn Recommendation Bubbles -->
+  <div id="rec-bubble-left" class="rec-bubble rec-bubble-left">
+    <button class="rec-bubble-close" onclick="dismissBubble('left')" aria-label="Close">×</button>
+    <div class="rec-bubble-quote">"</div>
+    <p class="rec-bubble-text"></p>
+    <div class="rec-bubble-author">
+      <span class="rec-bubble-name"></span>
+      <span class="rec-bubble-role"></span>
+    </div>
+  </div>
+  <div id="rec-bubble-right" class="rec-bubble rec-bubble-right">
+    <button class="rec-bubble-close" onclick="dismissBubble('right')" aria-label="Close">×</button>
+    <div class="rec-bubble-quote">"</div>
+    <p class="rec-bubble-text"></p>
+    <div class="rec-bubble-author">
+      <span class="rec-bubble-name"></span>
+      <span class="rec-bubble-role"></span>
+    </div>
+  </div>
+
+  <style>
+    .rec-bubble {
+      position: fixed;
+      width: 220px;
+      z-index: 900;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.7s ease;
+    }
+    .rec-bubble.rec-bubble-left { left: 20px; text-align: left; top: 32%; }
+    .rec-bubble.rec-bubble-right { right: 20px; text-align: right; top: 58%; }
+    .rec-bubble.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .rec-bubble-quote {
+      font-size: 2rem;
+      line-height: 1;
+      font-family: Georgia, serif;
+      color: var(--primary, #6366f1);
+      opacity: 0.35;
+      margin-bottom: 2px;
+      display: block;
+    }
+    .rec-bubble-text {
+      font-size: 0.775rem;
+      line-height: 1.6;
+      color: var(--text-secondary, #444);
+      margin: 0 0 10px;
+      max-height: 110px;
+      overflow: hidden;
+      font-style: italic;
+      opacity: 0.75;
+    }
+    .lights-off .rec-bubble-text { color: rgba(255,255,255,0.55); }
+    .rec-bubble-author {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+    .rec-bubble-name {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text, #1a1a2e);
+      opacity: 0.6;
+    }
+    .lights-off .rec-bubble-name { color: rgba(255,255,255,0.6); }
+    .rec-bubble-role {
+      font-size: 0.65rem;
+      color: var(--text-muted, #aaa);
+      opacity: 0.55;
+      line-height: 1.3;
+    }
+    .rec-bubble-close {
+      position: absolute;
+      top: -4px;
+      background: none;
+      border: none;
+      font-size: 0.85rem;
+      cursor: pointer;
+      color: var(--text-muted, #bbb);
+      opacity: 0.5;
+      line-height: 1;
+      padding: 2px 4px;
+      transition: opacity 0.2s;
+    }
+    .rec-bubble-left .rec-bubble-close { right: -4px; left: auto; }
+    .rec-bubble-right .rec-bubble-close { left: -4px; right: auto; }
+    .rec-bubble-close:hover { opacity: 1; }
+    @media (max-width: 900px) {
+      .rec-bubble { display: none; }
+    }
+  </style>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+
+    // Lights off / dark mode toggle
+    function toggleLights() {
+      document.body.classList.toggle('lights-off');
+      const isDark = document.body.classList.contains('lights-off');
+      localStorage.setItem('lightsOff', isDark ? 'true' : 'false');
+    }
+
+    // Check for saved preference
+    if (localStorage.getItem('lightsOff') === 'true') {
+      document.body.classList.add('lights-off');
+    }
+
+    // Scroll Animation Controller
+    const scrollController = {
+      init() {
+        this.progressBar = document.getElementById('scrollProgress');
+        this.animatedElements = document.querySelectorAll('[data-animate]');
+        this.lastScrollY = 0;
+        this.scrollVelocity = 0;
+        
+        this.bindEvents();
+        this.checkAnimations();
+        this.updateProgress();
+      },
+
+      bindEvents() {
+        let ticking = false;
+        
+        window.addEventListener('scroll', () => {
+          this.scrollVelocity = window.scrollY - this.lastScrollY;
+          this.lastScrollY = window.scrollY;
+          
+          if (!ticking) {
+            window.requestAnimationFrame(() => {
+              this.checkAnimations();
+              this.updateProgress();
+              this.applyVelocitySkew();
+              this.updateParallax();
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }, { passive: true });
+
+        // Magnetic float effect on mouse move
+        document.addEventListener('mousemove', (e) => {
+          this.updateMagneticFloat(e);
+        }, { passive: true });
+      },
+
+      updateProgress() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        this.progressBar.style.width = scrollPercent + '%';
+      },
+
+      checkAnimations() {
+        const triggerOffset = window.innerHeight * 0.85;
+        
+        this.animatedElements.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          const shouldAnimate = rect.top < triggerOffset && rect.bottom > 0;
+          
+          if (shouldAnimate) {
+            const delay = parseInt(el.dataset.delay) || 0;
+            
+            setTimeout(() => {
+              el.classList.add('revealed');
+              
+              // Handle staggered children
+              if (el.dataset.animate === 'words') {
+                const words = el.querySelectorAll('.word-inner');
+                words.forEach((word, i) => {
+                  setTimeout(() => word.parentElement.classList.add('revealed'), i * 80);
+                });
+              }
+              
+              if (el.dataset.animate === 'scramble') {
+                this.scrambleText(el);
+              }
+            }, delay);
+          }
+        });
+      },
+
+      scrambleText(element) {
+        const originalText = element.textContent;
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+        let iterations = 0;
+        
+        const interval = setInterval(() => {
+          element.textContent = originalText
+            .split('')
+            .map((char, index) => {
+              if (index < iterations) return originalText[index];
+              if (char === ' ') return ' ';
+              return chars[Math.floor(Math.random() * chars.length)];
+            })
+            .join('');
+          
+          iterations += 1/3;
+          
+          if (iterations >= originalText.length) {
+            clearInterval(interval);
+            element.textContent = originalText;
+          }
+        }, 30);
+      },
+
+      applyVelocitySkew() {
+        const skewElements = document.querySelectorAll('[data-animate="skew"]');
+        const maxSkew = 5;
+        const skewAmount = Math.max(-maxSkew, Math.min(maxSkew, this.scrollVelocity * 0.1));
+        
+        skewElements.forEach(el => {
+          el.style.transform = `skewY(${skewAmount}deg)`;
+        });
+      },
+
+      updateParallax() {
+        const parallaxLayers = document.querySelectorAll('[data-speed]');
+        const scrollY = window.scrollY;
+        
+        parallaxLayers.forEach(layer => {
+          const speed = parseFloat(layer.dataset.speed);
+          const yPos = -(scrollY * speed);
+          layer.style.transform = `translateY(${yPos}px)`;
+        });
+      },
+
+      updateMagneticFloat(e) {
+        const magneticElements = document.querySelectorAll('[data-animate="magnetic"]');
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+        
+        magneticElements.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          const centerX = rect.left + rect.width / 2;
+          const centerY = rect.top + rect.height / 2;
+          
+          const deltaX = (mouseX - centerX) * 0.02;
+          const deltaY = (mouseY - centerY) * 0.02;
+          
+          el.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        });
+      }
+    };
+
+    // Initialize on DOM ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => scrollController.init());
+    } else {
+      scrollController.init();
+    }
+
+    // LinkedIn Recommendation Bubbles
+    const recommendations = [
+      {
+        text: "Salma was my mentor cum professor in my business school. Salma's knowledge of Infosec subjects was incomparable and her ability to get students on board with ideas and healthy discussions was an asset to the entire batch of 200 students.",
+        name: "Anubhav Nagpal",
+        role: "Manager, Financial Services – Technology Risk Assurance | CISA | CSM | MS Azure"
+      },
+      {
+        text: "I worked with Salma in the cybersecurity practice of Deloitte. Right from the get go, I was in awe of her ability to positively influence consultants and clients alike in a very short period of time. She made it seem so effortless and natural. Within a week of joining Deloitte, each member of the team was so internally motivated to do their best for her. She is fully committed to helping her subordinates grow as an employee and even as a person.",
+        name: "Priyal Patel",
+        role: "Head of Strategy at ITRG | Ex-McKinsey"
+      },
+      {
+        text: "Working with Salma was the first time I got to work so closely with a female manager based out of the local office. Salma is a role model for women in cybersecurity, and in STEM for that matter – always learning and growing, treading unfamiliar territories in cybersecurity and doing an immense amount of self-learning to make sure she is on top of the new developments in her field.",
+        name: "Priyal Patel",
+        role: "Head of Strategy at ITRG | Ex-McKinsey"
+      },
+      {
+        text: "During my time at Mphasis and even still, Salma has been an inspiring leader and mentor. Her one and done approach, entrepreneurial training and leadership encouraged me to put my best foot forward in every engagement.",
+        name: "Manish Mishra",
+        role: "Lead – Technology and InfoSec Governance Assessment @ ANZ | CISM, CRISC, ISO 27001, CEH"
+      },
+      {
+        text: "Salma is hardworking, very committed and technically good in her field of work. She has diversified knowledge and right expertise in Information Security and Compliance. Salma is a very energetic person who brings along with her lot of creativity and out of box ideas. She has been a wonderful team player.",
+        name: "Bhanu Vrat",
+        role: "Principal Security Consultant, Cyber & Data Resilience at KROLL"
+      },
+      {
+        text: "I had a brief yet wonderful opportunity to work with Salma in the Risk & Financial Advisory practice at Deloitte-Qatar. She is one of the most practical and driven managers one could ever meet. Her positivity and gravitas is a force to reckon with in terms of collaboration within the team.",
+        name: "Sharen Mannar",
+        role: "Information Security Compliance & Technology Risk Assurance specialist"
+      }
+    ];
+
+    const recBubbleController = {
+      leftIndex: 0,
+      rightIndex: 3,
+      leftDismissed: false,
+      rightDismissed: false,
+      lastScrollY: -1,
+      scrollThreshold: 120,
+      lastLeftSwap: 0,
+      lastRightSwap: 0,
+
+      init() {
+        this.leftEl = document.getElementById('rec-bubble-left');
+        this.rightEl = document.getElementById('rec-bubble-right');
+        this.populate('left', this.leftIndex);
+        this.populate('right', this.rightIndex);
+
+        window.addEventListener('scroll', () => this.onScroll(), { passive: true });
+
+        setTimeout(() => {
+          if (!this.leftDismissed) this.show('left');
+          setTimeout(() => { if (!this.rightDismissed) this.show('right'); }, 600);
+        }, 1800);
+      },
+
+      populate(side, index) {
+        const rec = recommendations[index % recommendations.length];
+        const el = side === 'left' ? this.leftEl : this.rightEl;
+        el.querySelector('.rec-bubble-text').textContent = rec.text;
+        el.querySelector('.rec-bubble-name').textContent = rec.name;
+        el.querySelector('.rec-bubble-role').textContent = rec.role;
+      },
+
+      show(side) {
+        const el = side === 'left' ? this.leftEl : this.rightEl;
+        el.classList.add('visible');
+      },
+
+      hide(side) {
+        const el = side === 'left' ? this.leftEl : this.rightEl;
+        el.classList.remove('visible');
+      },
+
+      swapTo(side, newIndex) {
+        this.hide(side);
+        setTimeout(() => {
+          this.populate(side, newIndex);
+          setTimeout(() => this.show(side), 100);
+        }, 450);
+      },
+
+      onScroll() {
+        const scrollY = window.scrollY;
+        const delta = Math.abs(scrollY - this.lastScrollY);
+        if (delta < this.scrollThreshold) return;
+        this.lastScrollY = scrollY;
+
+        const now = Date.now();
+
+        if (!this.leftDismissed && now - this.lastLeftSwap > 1200) {
+          this.lastLeftSwap = now;
+          this.leftIndex = (this.leftIndex + 2) % recommendations.length;
+          this.swapTo('left', this.leftIndex);
+        }
+
+        if (!this.rightDismissed && now - this.lastRightSwap > 1200) {
+          this.lastRightSwap = now + 400;
+          this.rightIndex = (this.rightIndex + 2) % recommendations.length;
+          setTimeout(() => this.swapTo('right', this.rightIndex), 500);
+        }
+      }
+    };
+
+    function dismissBubble(side) {
+      if (side === 'left') {
+        recBubbleController.leftDismissed = true;
+        recBubbleController.hide('left');
+      } else {
+        recBubbleController.rightDismissed = true;
+        recBubbleController.hide('right');
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => recBubbleController.init());
+    } else {
+      recBubbleController.init();
+    }
+
+    // Rotating hero quote — changes every 24 hours, randomized order
+    (function() {
+      const quotes = [
+        "\u201cCarpe Diem\u201d",
+        "\u201cSeize the day!\u201d",
+        "\u201cLife begins at the edge of your comfort zone.\u201d"
+      ];
+
+      const STORAGE_KEY_INDEX = 'heroQuoteIndex';
+      const STORAGE_KEY_ORDER = 'heroQuoteOrder';
+      const STORAGE_KEY_TIME  = 'heroQuoteTime';
+      const MS_24H = 24 * 60 * 60 * 1000;
+
+      function shuffle(arr) {
+        const a = [...arr];
+        for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+      }
+
+      let order = JSON.parse(localStorage.getItem(STORAGE_KEY_ORDER) || 'null');
+      let idx   = parseInt(localStorage.getItem(STORAGE_KEY_INDEX) || '0', 10);
+      let last  = parseInt(localStorage.getItem(STORAGE_KEY_TIME)  || '0', 10);
+      const now = Date.now();
+
+      if (!order || order.length !== quotes.length) {
+        order = shuffle(quotes.map((_, i) => i));
+        idx   = 0;
+        last  = now;
+        localStorage.setItem(STORAGE_KEY_ORDER, JSON.stringify(order));
+        localStorage.setItem(STORAGE_KEY_INDEX, idx);
+        localStorage.setItem(STORAGE_KEY_TIME,  now);
+      } else if (now - last >= MS_24H) {
+        idx = (idx + 1) % quotes.length;
+        if (idx === 0) {
+          order = shuffle(quotes.map((_, i) => i));
+          localStorage.setItem(STORAGE_KEY_ORDER, JSON.stringify(order));
+        }
+        last = now;
+        localStorage.setItem(STORAGE_KEY_INDEX, idx);
+        localStorage.setItem(STORAGE_KEY_TIME,  now);
+      }
+
+      const el = document.getElementById('hero-quote-text');
+      if (el) el.textContent = quotes[order[idx]];
+    })();
+  </script>
+</body>
+</html>
